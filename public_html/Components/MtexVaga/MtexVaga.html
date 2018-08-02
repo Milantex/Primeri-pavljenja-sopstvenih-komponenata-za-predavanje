@@ -1,0 +1,68 @@
+<template id="mtex-vaga-template">
+    <style scoped="">
+        .mtex-vaga {
+            border: 5px solid transparent;
+            position: relative;
+            height: 200px;
+            width: 200px;
+
+            -webkit-touch-callout: none;
+              -webkit-user-select: none;
+               -khtml-user-select: none;
+                 -moz-user-select: none;
+                  -ms-user-select: none;
+                      user-select: none;
+        }
+
+        .mtex-vaga .left-side,
+        .mtex-vaga .right-side {
+            border: 5px solid transparent;
+            width: calc(50% - 15px);
+            border-radius: 5px;
+            position: absolute;
+            transition: 500ms;
+            bottom: 25px;
+            top: 0px;
+        }
+
+        .mtex-vaga .left-side {
+            background-color: #922;
+            left: 0px;
+        }
+
+        .mtex-vaga .right-side {
+            background-color: #229;
+            right: 0px;
+        }
+
+        .mtex-vaga .left-label,
+        .mtex-vaga .right-label {
+            border: 5px solid transparent;
+            width: calc(50% - 15px);
+            text-align: center;
+            position: absolute;
+            font-weight: bold;
+            bottom: 0px;
+        }
+
+        .mtex-vaga .left-label {
+            color: #922;
+            left: 0px;
+        }
+
+        .mtex-vaga .right-label {
+            color: #229;
+            right: 0px;
+        }
+    </style>
+
+    <div class="mtex-vaga">
+        <div class="left-side"></div>
+        <div class="left-label">0 kg</div>
+
+        <div class="right-side"></div>
+        <div class="right-label">0 kg</div>
+    </div>
+</template>
+
+<script src="MtexVaga.js"></script>

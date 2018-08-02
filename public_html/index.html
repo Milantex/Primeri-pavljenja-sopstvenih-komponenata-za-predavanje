@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="sr">
+    <head>
+        <title>Primeri pavljenja sopstvenih komponenata</title>
+        <meta charset="UTF-8">
+        <link rel="icon" href="favicon.ico">
+
+        <link rel="import" href="Components/MtexVaga/MtexVaga.html">
+        <link rel="import" href="Components/MtexScope/MtexScope.html">
+    </head>
+    <body>
+        <h1>Primeri pavljenja sopstvenih komponenata</h1>
+
+        <div>
+            <h2>Vaga</h2>
+            <mtex-vaga id="vaga-1" left="13" right="40"></mtex-vaga>
+            <br>
+
+            <input type="number" min="1" step="1" id="masa-l" placeholder="Levo" value="13">
+            <input type="number" min="1" step="1" id="masa-d" placeholder="Desno" value="40">
+            <button type="button" onclick="postaviNaVagu();">Postavi na vagu</button>
+            <script>
+                function postaviNaVagu() {
+                    document.querySelector('#vaga-1').left  = document.querySelector('#masa-l').value;
+                    document.querySelector('#vaga-1').right = document.querySelector('#masa-d').value;
+                }
+            </script>
+        </div>
+
+        <div>
+            <h2>Osciloskop</h2>
+
+            <mtex-scope id="scope-1" frequency="35"></mtex-scope>
+            <br>
+
+            <input type="number" min="1" step="1" id="frequency" placeholder="Frekvencija" value="35">
+            <button type="button" onclick="postaviNaOsciloskop();">Postavi na osciloskop</button>
+            <script>
+                function postaviNaOsciloskop() {
+                    document.querySelector('#scope-1').frequency = document.querySelector('#frequency').value;
+                }
+            </script>
+        </div>
+    </body>
+</html>

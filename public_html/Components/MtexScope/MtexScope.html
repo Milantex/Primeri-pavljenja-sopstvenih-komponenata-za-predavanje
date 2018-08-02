@@ -1,0 +1,31 @@
+<template id="mtex-scope-template">
+    <style scoped="">
+        .mtex-scope {
+            border: 1px solid black;
+            position: relative;
+            height: 200px;
+            width: 300px;
+
+            -webkit-touch-callout: none;
+              -webkit-user-select: none;
+               -khtml-user-select: none;
+                 -moz-user-select: none;
+                  -ms-user-select: none;
+                      user-select: none;
+        }
+
+        .mtex-scope canvas {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            left: 0px;
+            top: 0px;
+        }
+    </style>
+
+    <div class="mtex-scope">
+        <canvas></canvas>
+    </div>
+</template>
+
+<script src="MtexScope.js"></script>
